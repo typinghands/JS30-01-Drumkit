@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Drum on!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="image/png" rel="icon" href="images/my-favicon.png">
+
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+        background: url(./images/bg.jpg) no-repeat rgb(37, 36, 36);
+        background-size: cover;
+      }
+
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 50vh;
+      }
+
+      kbd {
+        font-size: 30px;
+        color: white;
+
+        position: relative;
+        top: 20px;
+        left: 50%;
+      }
+
+      span {
+        position: relative;
+        top: 60px;
+        right: 10%;
+      }
+
+      .key {
+        width: 120px;
+        height: 120px;
+        background-color: rgba(0, 0, 0, 0.281);
+        border: 3px black solid;
+        border-radius: 20%;
+        transition-duration: 0.8ms;
+      }
+
+      .playing {
+        transform: scale(1.1);
+        border-color: #36bd53;
+        box-shadow: 0 0 8px #36bd53;
+      }
+
+      .sound {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+        color: #36bd53;
+      }
+
+      #drumLogo {
+        margin-top: 20px;
+        margin-left: 30px;
+        height: 120px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="images/drum-on.svg" alt="Drum On" id="drumLogo" />
+
+    <div class="flex">
+      <div data-key="65" class="key" id="test1">
+        <kbd>A</kbd> <span class="sound">clap</span>
+      </div>
+      <div data-key="83" class="key">
+        <kbd>S</kbd> <span class="sound">hihat</span>
+      </div>
+      <div data-key="68" class="key">
+        <kbd>D</kbd> <span class="sound">kick</span>
+      </div>
+      <div data-key="70" class="key">
+        <kbd>F</kbd> <span class="sound">openhat</span>
+      </div>
+      <div data-key="71" class="key">
+        <kbd>G</kbd> <span class="sound">boom</span>
+      </div>
+      <div data-key="72" class="key">
+        <kbd>H</kbd> <span class="sound">ride</span>
+      </div>
+      <div data-key="74" class="key">
+        <kbd>J</kbd> <span class="sound">snare</span>
+      </div>
+      <div data-key="75" class="key">
+        <kbd>K</kbd> <span class="sound">tom</span>
+      </div>
+      <div data-key="76" class="key">
+        <kbd>L</kbd> <span class="sound">tink</span>
+      </div>
+    </div>
+
+    <audio data-key="65" src="sounds/clap.wav"></audio>
+    <audio data-key="83" src="sounds/hihat.wav"></audio>
+    <audio data-key="68" src="sounds/kick.wav"></audio>
+    <audio data-key="70" src="sounds/openhat.wav"></audio>
+    <audio data-key="71" src="sounds/boom.wav"></audio>
+    <audio data-key="72" src="sounds/ride.wav"></audio>
+    <audio data-key="74" src="sounds/snare.wav"></audio>
+    <audio data-key="75" src="sounds/tom.wav"></audio>
+    <audio data-key="76" src="sounds/tink.wav"></audio>
+    <!-- Visit http://keycode.info/ to understand better which key belongs to what -->
+
+    <script src="drums.js"></script>
+  </body>
+</html>

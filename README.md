@@ -5,4 +5,7 @@ I have mostly redesigned the site and tried to rebuild it as much as I could fro
 
 ---
 
+How to use it: 
+The page will allow you to play out a set of 9 instruments all playable simply by typing the corrisponding key on your keyboard!
+
 Check it out here: https://typinghands.github.io/JS30-01-Drumkit/
